@@ -1,9 +1,12 @@
-function App() {
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { Hero } from "./components/Hero/Hero";
+export function App() {
   return (
-    <div>
-      <h1 className="text-3xl text-white bg-black p-8">Orion Ink Studio 🖤</h1>
+    <div className="bg-black min-h-screen">
+      <Header />
+      <Hero />
+      <Footer />
     </div>
   );
 }
-
-export default App;
