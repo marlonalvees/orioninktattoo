@@ -31,7 +31,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div>
           <p className="text-yellow-600 text-xl font-black tracking-widest">
-            Orion
+            ORION
           </p>
           <p className="text-zinc-600 text-[.5625rem] tracking-widest uppercase">
             Ink Studio
