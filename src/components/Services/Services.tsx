@@ -94,12 +94,12 @@ export function Services() {
                 </p>
 
                 <ul className="flex flex-wrap gap-2 mb-6">
-                  {service.details.map((detalhe) => (
+                  {service.details.map((details) => (
                     <li
-                      key={detalhe}
+                      key={details}
                       className="text-xs uppercase tracking-widest px-2.5 py-1 border border-zinc-800 text-zinc-500 group-hover:border-yellow-900 group-hover:text-yellow-700 transition-all duration-300"
                     >
-                      {detalhe}
+                      {details}
                     </li>
                   ))}
                 </ul>
