@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -51,12 +52,12 @@ export function Header() {
           >
             Serviços
           </a>
-          <a
-            href="#galeria"
+          <Link
+            to={"gallery"}
             className="text-zinc-400 hover:text-yellow-600 text-xs uppercase tracking-widest transition-colors duration-300"
           >
             Galeria
-          </a>
+          </Link>
           <a
             href="#contato"
             className="text-zinc-400 hover:text-yellow-600 text-xs uppercase tracking-widest transition-colors duration-300"
@@ -64,7 +65,7 @@ export function Header() {
             Contato
           </a>
         </nav>
-
+        {/* Hambúrguer */}
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -80,7 +81,7 @@ export function Header() {
           />
         </button>
       </div>
-
+      {/* Menu Mobile */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-500 ${menuOpen ? "max-h-64" : "max-h-0"}`}
       >
@@ -99,13 +100,14 @@ export function Header() {
           >
             Serviços
           </a>
-          <a
-            href="#galeria"
+
+          <Link
+            to="/gallery"
             onClick={() => setMenuOpen((prev) => !prev)}
             className="text-zinc-400 hover:text-yellow-600 text-xs uppercase tracking-widest transition-colors py-2"
           >
             Galeria
-          </a>
+          </Link>
           <a
             href="#contato"
             onClick={() => setMenuOpen((prev) => !prev)}

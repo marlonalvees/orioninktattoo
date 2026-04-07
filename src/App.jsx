@@ -1,17 +1,19 @@
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
-import { Hero } from "./components/Hero/Hero";
-import { About } from "./components/About/About";
-import { Services } from "./components/Services/Services";
-import { GalleryPreview } from "./components/Gallery/GalleryPreview";
+import { HomePage } from "./pages/HomePage";
+import { GalleryPage } from "./pages/GalleryPage";
+import { Routes, Route } from "react-router-dom";
+
 export function App() {
   return (
     <div className="bg-black min-h-screen">
       <Header />
-      <Hero />
-      <About />
-      <Services />
-      <GalleryPreview />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+      </Routes>
+
       <Footer />
     </div>
   );
